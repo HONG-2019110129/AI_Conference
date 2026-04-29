@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "schemaId": "sup9-nonconformance",
+    "schemaVersion": "1.0.0",
+    "title": "[SUP.9] Non-Conformance List"
+  },
+
+  "headerFields": [
+    {
+      "key": "tracker",
+      "label": "Tracker",
+      "inputType": "static",
+      "value": "[SUP.9] Non-Conformance List"
+    },
+    {
+      "key": "status",
+      "label": "Status",
+      "inputType": "select",
+      "defaultValue": "Open",
+      "options": [
+        { "value": "Open", "label": "Open" },
+        { "value": "InAnalysis", "label": "In Progress" },
+        { "value": "InProgress", "label": "Closed" }
+      ]
+    },
+    {
+      "key": "prid",
+      "label": "PR-ID",
+      "inputType": "static",
+      "value": "자동 생성 됩니다.",
+      "tone": "muted"
+    },
+    {
+      "key": "priority",
+      "label": "Priority",
+      "inputType": "select",
+      "defaultValue": "Medium",
+      "options": [
+        { "value": "Low", "label": "Low" },
+        { "value": "Medium", "label": "Medium" },
+        { "value": "High", "label": "High" }
+      ]
+    }
+  ],
+
+  "phases": [
+    { "phase": "PI", "title": null },
+    { "phase": "PA", "title": null },
+    { "phase": "PR", "title": null }
+  ],
+
+  "fields": [
+
+    { "key": "pi_identifier", "phase": "PI", "label": "Identifier", "inputType": "text", "placeholder": "" },
+
+    { "key": "pi_date", "phase": "PI", "label": "Date", "inputType": "date" },
+
+    {
+      "key": "pi_source",
+      "phase": "PI",
+      "label": "Source",
+      "inputType": "select",
+      "defaultValue": "",
+      "placeholder": "--",
+      "options": [
+        { "value": "Internal", "label": "Internal" },
+        { "value": "External", "label": "External" },
+        { "value": "Audit", "label": "Audit" },
+        { "value": "Customer", "label": "Customer" }
+      ]
+    },
+
+    {
+      "key": "pi_process_id",
+      "phase": "PI",
+      "label": "Process ID",
+      "inputType": "text",
+      "placeholder": "예: SYS.2 / SWE.1 / SUP.9 ..."
+    },
+
+    {
+      "key": "pi_issue_type",
+      "phase": "PI",
+      "label": "Issue Type",
+      "inputType": "select",
+      "defaultValue": "",
+      "placeholder": "--",
+      "options": [
+        { "value": "Nonconformance", "label": "Non-conformance" },
+        { "value": "Observation", "label": "Observation" },
+        { "value": "Improvement", "label": "Improvement" }
+      ]
+    },
+
+    {
+      "key": "pi_safety_anomaly",
+      "phase": "PI",
+      "label": "Safety Anomaly",
+      "inputType": "select",
+      "defaultValue": "No",
+      "options": [
+        { "value": "Yes", "label": "Yes" },
+        { "value": "No", "label": "No" }
+      ]
+    },
+
+    {
+      "key": "pi_problem_desc",
+      "phase": "PI",
+      "label": "Problem Description",
+      "inputType": "textarea",
+      "placeholder": "문제 현상/증상/재현 조건 등을 작성"
+    },
+
+    { "key": "pi_related_item", "phase": "PI", "label": "Related Item", "inputType": "text", "placeholder": "연관 이슈/요구사항/테스트 ID 등" },
+
+    { "key": "pi_reporter", "phase": "PI", "label": "Reporter", "inputType": "person", "placeholder": "작성자 지정" },
+
+    { "key": "pi_due_date", "phase": "PI", "label": "Target Due Date", "inputType": "date" },
+
+
+
+
+    { "key": "pa_analyzer", "phase": "PA", "label": "Analyzer", "inputType": "person", "placeholder": "분석 담당자 지정" },
+
+    { "key": "pa_date", "phase": "PA", "label": "Analysis Date", "inputType": "date" },
+
+    {
+      "key": "pa_urgency",
+      "phase": "PA",
+      "label": "Urgency",
+      "inputType": "select",
+      "defaultValue": "",
+      "placeholder": "--",
+      "options": [
+        { "value": "Low", "label": "Low" },
+        { "value": "Medium", "label": "Medium" },
+        { "value": "High", "label": "High" },
+        { "value": "Critical", "label": "Critical" }
+      ]
+    },
+
+    { "key": "pa_urgent_issue_link", "phase": "PA", "label": "Urgent Issue Link", "inputType": "text", "placeholder": "http://..." },
+
+    {
+      "key": "pa_root_cause_type",
+      "phase": "PA",
+      "label": "Root Cause Type",
+      "inputType": "select",
+      "defaultValue": "",
+      "placeholder": "--",
+      "options": [
+        { "value": "Process", "label": "Process" },
+        { "value": "People", "label": "People" },
+        { "value": "Tool", "label": "Tool" },
+        { "value": "Requirement", "label": "Requirement" },
+        { "value": "Design", "label": "Design" },
+        { "value": "Implementation", "label": "Implementation" }
+      ]
+    },
+
+    { "key": "pa_root_cause_process_id", "phase": "PA", "label": "Root Cause Process ID", "inputType": "text", "placeholder": "예: SWE.2, SYS.4 ..." },
+
+    { "key": "pa_root_cause_desc", "phase": "PA", "label": "Root Cause Description", "inputType": "textarea", "placeholder": "근본 원인 설명" },
+
+    { "key": "pa_impact", "phase": "PA", "label": "Impact / Risk", "inputType": "textarea", "placeholder": "영향도/리스크/범위" },
+
+    { "key": "pa_containment_action", "phase": "PA", "label": "Containment Action", "inputType": "textarea", "placeholder": "임시 조치(즉시 대응)" },
+
+    { "key": "pa_related_evidence", "phase": "PA", "label": "Evidence / Attachments", "inputType": "text", "placeholder": "증빙 링크/파일명/경로" },
+
+
+    { "key": "pr_pi id", "phase": "PR", "label": "PI ID", "inputType": "person", "placeholder": "무슨 필드인지 모르겠음" },
+
+    { "key": "pr_change request id", "phase": "PR", "label": "Change Request ID", "inputType": "person", "placeholder": "변경 요청 아이디 기입(변경으로 이어지는 경우)" },
+
+    { "key": "pr_resolver", "phase": "PR", "label": "Resolver", "inputType": "person", "placeholder": "조치 담당자 지정" },
+
+    { "key": "pr_action_plan", "phase": "PR", "label": "Action Plan", "inputType": "textarea", "placeholder": "조치 계획(무엇을/어떻게)" },
+
+    { "key": "pr_due_date", "phase": "PR", "label": "Due Date", "inputType": "date" },
+
+    {
+      "key": "pr_action_status",
+      "phase": "PR",
+      "label": "Action Status",
+      "inputType": "select",
+      "defaultValue": "Planned",
+      "options": [
+        { "value": "Planned", "label": "Planned" },
+        { "value": "Ongoing", "label": "Ongoing" },
+        { "value": "Done", "label": "Done" }
+      ]
+    },
+
+    { "key": "pr_result", "phase": "PR", "label": "Result / Output", "inputType": "textarea", "placeholder": "산출물/변경점/결과 요약" },
+
+    { "key": "pr_preventive_action", "phase": "PR", "label": "Preventive Action", "inputType": "textarea", "placeholder": "재발 방지 대책" },
+
+    { "key": "pr_verification_method", "phase": "PR", "label": "Verification Method", "inputType": "select", "defaultValue": "", "placeholder": "--",
+      "options": [
+        { "value": "Review", "label": "Review" },
+        { "value": "Test", "label": "Test" },
+        { "value": "Analysis", "label": "Analysis" },
+        { "value": "Audit", "label": "Audit" }
+      ]
+    },
+
+    { "key": "pr_verification_date", "phase": "PR", "label": "Verification Date", "inputType": "date" },
+
+    { "key": "pr_verifier", "phase": "PR", "label": "Verifier", "inputType": "person", "placeholder": "조치 확인자 지정" },
+
+    { "key": "pr_closure_note", "phase": "PR", "label": "Closure Note", "inputType": "textarea", "placeholder": "종결 조건/참고 사항" }
+  ]
+}
